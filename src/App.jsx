@@ -1,10 +1,10 @@
-import React,{ useEffect, useState } from 'react'
-import TodoForm from './components/Todoform'
-import TodoItem from './components/ToDoItem'
+import { useEffect, useState } from 'react'
+import TodoForm from './components/TodoForm.jsx'
+import TodoItem from './components/ToDoItem.jsx'
 import { TodoProvider } from './context/index'
 
 function App() {
-
+  
   const [todos,settodos] = useState([])
   const addtodo = (title)=>{
     settodos((prev)=>[...prev,{id: Date.now(), ...title}])
